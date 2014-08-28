@@ -18,3 +18,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'quiet_assets'
+end
+
