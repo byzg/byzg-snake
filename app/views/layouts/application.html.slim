@@ -1,9 +1,37 @@
 doctype html
-  html
-    head
-      title ByzgSnake
-      = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
-      = javascript_include_tag "application", "data-turbolinks-track" => true
-      = csrf_meta_tags
-      meta name="viewport" content="width=device-width, initial-scale=1"
-    body
+html
+  head
+    title ByzgSnake
+    = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width, initial-scale=1"
+  body
+    .container
+      .row
+        .col-xs-12.game-content
+          .menu
+            nav.navbar.navbar-default role="navigation"
+              .container-fluid
+                .navbar-header
+                  button.navbar-toggle data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                  a.navbar-brand href="#"  byzg-snake
+                #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                  ul.nav.navbar-nav
+                    li.start
+                      a href="#"
+                        span.glyphicon.glyphicon-play
+                        span.hidden-md Пуск
+                    li.pause
+                      a href="#"
+                        span.glyphicon.glyphicon-pause
+                        span.hidden-md Стоп
+                    li
+                      a href="#"
+                        span.glyphicon.glyphicon-wrench
+                        | Настройки
+          .board

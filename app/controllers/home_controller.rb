@@ -1,3 +1,3 @@
-class HomeController < AplicationController
+class HomeController < ApplicationController
 
 end
